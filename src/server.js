@@ -23,7 +23,7 @@ mongoose.connect(mongoConnectionString).then(function()
     // Define App routes
     // Home route (/) 
     app.get("/", function(req, res){
-        const response = { message: "Everything works!" };
+        const response = { statuscode: res.statusCode, message: "Everything works!" };
         res.json(response);
     });
 
